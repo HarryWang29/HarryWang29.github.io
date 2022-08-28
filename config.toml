@@ -2,7 +2,7 @@ baseURL = 'https://harrywang29.github.io/'
 languageCode = 'zh-cn'
 title = '人渣29的小窝'
 theme = 'hugo-coder'
-googleAnalytics = '329085218'
+googleAnalytics = 'G-JS09HCGHMW'
 
 [params]
 author = "Harry Wang"
