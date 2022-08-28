@@ -19,6 +19,6 @@ colorScheme = "auto"
   url = "https://github.com/HarryWang29/"
 
 [[menu.main]]
-  name = "Blog"
+  name = "tech"
   weight = 1
-  url  = "second/"
+  url  = "tech/"
