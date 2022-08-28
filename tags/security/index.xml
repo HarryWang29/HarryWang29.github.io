@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>security on 人渣29的小窝</title><link>https://harrywang29.github.io/tags/security/</link><description>Recent content in security on 人渣29的小窝</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Aug 2022 22:07:01 +0800</lastBuildDate><atom:link href="https://harrywang29.github.io/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>突破vuepress Theme Reco 1.x的密码限制</title><link>https://harrywang29.github.io/tech/%E7%AA%81%E7%A0%B4vuepress-theme-reco-1.x%E7%9A%84%E5%AF%86%E7%A0%81%E9%99%90%E5%88%B6/</link><pubDate>Fri, 26 Aug 2022 22:07:01 +0800</pubDate><guid>https://harrywang29.github.io/tech/%E7%AA%81%E7%A0%B4vuepress-theme-reco-1.x%E7%9A%84%E5%AF%86%E7%A0%81%E9%99%90%E5%88%B6/</guid><description>起因 Link to heading 在这个blog准备架设的时候，查看了一个前端同事的blog，他的架设方式为：
+github action vurpress 在观察他blog的过程中，他提到了有一个文档是属于加密状态，此时作为一个后端开发，我立刻想到了一个问题，你一个纯前端页面，如何能够保证自己的密码安全？
+挑战 Link to heading 在我提出质疑之后，前端同事向我提出了挑战，让我看看是否能够看到里面的内容，作为一个喜欢瞎折腾的人，必然接受了挑战
+解决方案 Link to heading github-master Link to heading 由于他是基于github+action，那么我非常简单的就找到了文本内容，步骤如下：
+打开仓库首页 确认master分支 找到文档存储位置 点开文档 好了，非常简单，因为action的原因，你必须要将自己的文档完全的放入仓库中，action才能进行编译等操作 但是此时看到内容，我总感觉没啥意思，好了，开始给自己加活
+github-gh-pages Link to heading 其实这个方法的原理和master的方法一样，都是有源码的情况下，能够看到静态的html，流程如下：
+打开仓库首页 确认gh-pages分支 找到文档存储位置 点开文档 依旧非常简单，我们在html中看到了文本的正文
+以上两种其实算是我知道他源码仓库的情况下，假设他修改了blog域名，我不知道他的github仓库，那么我要如何操作呢？
+chrome-&amp;gt;view page source Link to heading 祭出chrome（其实firefox什么的都一样，没有什么复杂的东西）
+打开blog加密页
+界面如下 view page source
+到这一步大家应该发现了，其实这里的page和上面的gh-pages中一样了，html文件中写着正文
+其实到这里我本来不想再进行下去了，不过一直没有正式的把Konck!Knock!干掉总也有点不甘心
+chrome替换js大法 Link to heading 查看vuepress-theme-reco-1.x关于密码部分源码，发现密码的校验与生成也是非常简单
+const isHasPageKey = () =&amp;gt; { const pageKeys = instance.$frontmatter.keys.map(item =&amp;gt; item.</description></item></channel></rss>
